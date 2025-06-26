@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Mood Tracker | MellowMind</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo" onclick="location.href='../index.html'">MellowMind</div>
+      <nav>
+        <a href="features.html">← Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="decorations">
+          <div class="decoration star" style="top: 15%; left: 15%;"></div>
+          <div class="decoration circle" style="top: 20%; right: 25%;"></div>
+        </div>
+        <div class="feature-icon purple">📊</div>
+        <h1>Mood Tracking</h1>
+        <p class="feature-description">Monitor your daily moods and identify patterns with our intuitive tracking system.</p>
+      </section>
+
+      <section class="mood-tracker-container">
+        <div class="mood-selector card">
+          <h2>How are you feeling today?</h2>
+          <div class="mood-options">
+            <button class="mood-option" data-mood="sad">😔</button>
+            <button class="mood-option" data-mood="meh">😐</button>
+            <button class="mood-option" data-mood="okay">🙂</button>
+            <button class="mood-option" data-mood="good">😊</button>
+            <button class="mood-option" data-mood="great">😁</button>
+          </div>
+          <button class="btn-secondary" id="logMoodBtn">Log Mood</button>
+        </div>
+
+        <h2>Mood History</h2>
+        <div class="mood-history card">
+          <div id="moodCalendar" class="mood-calendar">
+            <!-- Mood history will be displayed here -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/mood.js"></script>
+</body>
+</html>

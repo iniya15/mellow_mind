@@ -1,0 +1,171 @@
+/* Animation Styles */
+
+/* Floating decorations */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.decoration.star {
+  animation: float 6s ease-in-out infinite;
+}
+
+.decoration.circle {
+  animation: float 7s ease-in-out infinite reverse;
+}
+
+.decoration.square {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card, .feature-card-large, .journal-entry, .card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Button pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-primary:active {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Breathing animation */
+@keyframes breathIn {
+  from {
+    transform: scale(1);
+    background-color: var(--primary-light);
+  }
+  to {
+    transform: scale(1.3);
+    background-color: var(--primary);
+  }
+}
+
+@keyframes breathOut {
+  from {
+    transform: scale(1.3);
+    background-color: var(--primary);
+  }
+  to {
+    transform: scale(1);
+    background-color: var(--primary-light);
+  }
+}
+
+@keyframes breathHold {
+  from {
+    transform: scale(1.3);
+    background-color: var(--primary);
+  }
+  to {
+    transform: scale(1.3);
+    background-color: var(--primary-dark);
+  }
+}
+
+.breath-in {
+  animation: breathIn 4s forwards;
+}
+
+.breath-hold {
+  animation: breathHold 7s forwards;
+}
+
+.breath-out {
+  animation: breathOut 8s forwards;
+}
+
+/* Page transitions */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app-container {
+  animation: pageEnter 0.4s ease-out;
+}
+
+/* Mood selection animation */
+@keyframes moodSelect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.mood-option.selected {
+  animation: moodSelect 0.3s ease-out forwards;
+}
+
+/* Button hover effect */
+.btn-primary, .btn-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after, .btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.btn-primary:hover::after, .btn-secondary:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}

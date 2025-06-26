@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Self-Care Planner | MellowMind</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo" onclick="location.href='../index.html'">MellowMind</div>
+      <nav>
+        <a href="features.html#self-care-planner">← Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="decorations">
+          <div class="decoration star" style="top: 15%; left: 15%;"></div>
+          <div class="decoration circle" style="top: 20%; right: 25%;"></div>
+        </div>
+        <div class="feature-icon pink">📅</div>
+        <h1>Self-Care Planner</h1>
+        <p class="feature-description">Plan and track your self-care activities with our intuitive planner.</p>
+      </section>
+
+      <section class="self-care-container">
+        <div class="activity-form card">
+          <h2>Add Self-Care Activity</h2>
+          <form id="activityForm">
+            <div class="form-group">
+              <label for="activityName">Activity Name</label>
+              <input type="text" id="activityName" placeholder="e.g., Morning meditation">
+            </div>
+            <div class="form-group">
+              <label for="activityType">Activity Type</label>
+              <select id="activityType">
+                <option value="physical">Physical</option>
+                <option value="emotional">Emotional</option>
+                <option value="mental">Mental</option>
+                <option value="social">Social</option>
+                <option value="spiritual">Spiritual</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="activityNotes">Notes (Optional)</label>
+              <textarea id="activityNotes" placeholder="Any notes or details about this activity"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Add Activity</button>
+          </form>
+        </div>
+
+        <h2>Your Self-Care Plan</h2>
+        <div id="activitiesContainer" class="activities-list">
+          <p class="empty-state">Your self-care activities will appear here. Start by adding an activity above!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 MellowMind. Your data never leaves your device.</p>
+    </footer>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/self-care.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Anxiety Check | MellowMind</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo" onclick="location.href='../index.html'">MellowMind</div>
+      <nav>
+        <a href="features.html#anxiety-checkins">← Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="decorations">
+          <div class="decoration star" style="top: 15%; left: 15%;"></div>
+          <div class="decoration circle" style="top: 20%; right: 25%;"></div>
+        </div>
+        <div class="feature-icon pink">❤️</div>
+        <h1>Anxiety & Stress Check-ins</h1>
+        <p class="feature-description">Regular weekly assessments with personalized coping strategies.</p>
+      </section>
+
+      <section class="anxiety-check-container">
+        <div class="anxiety-form card">
+          <h2>Anxiety & Stress Check-in</h2>
+          <form id="anxietyForm">
+            <div class="form-group">
+              <label for="anxietyLevel">Rate your current anxiety level:</label>
+              <div class="slider-container">
+                <input type="range" id="anxietyLevel" min="1" max="10" value="5" class="slider">
+                <div class="slider-labels">
+                  <span>Low</span>
+                  <span>Moderate</span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-primary" id="startBreathingBtn">Start Guided Breathing</button>
+          </form>
+        </div>
+
+        <div class="coping-strategies card">
+          <h2>Coping Strategies</h2>
+          <ul class="strategy-list">
+            <li><span class="bullet"></span>4-7-8 Breathing Technique</li>
+            <li><span class="bullet"></span>Progressive Muscle Relaxation</li>
+            <li><span class="bullet"></span>5 Senses Grounding Exercise</li>
+            <li><span class="bullet"></span>Mindful Walking</li>
+          </ul>
+        </div>
+      </section>
+
+      <div id="breathingExercise" class="breathing-modal">
+        <div class="breathing-content">
+          <h2>Guided Breathing</h2>
+          <div class="breathing-circle"></div>
+          <p id="breathingInstruction">Breathe in...</p>
+          <button class="btn-secondary" id="stopBreathingBtn">Stop Exercise</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 MellowMind. Your data never leaves your device.</p>
+    </footer>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/anxiety.js"></script>
+</body>
+</html>

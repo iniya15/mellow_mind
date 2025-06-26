@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Goal Setting | MellowMind</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo" onclick="location.href='../index.html'">MellowMind</div>
+      <nav>
+        <a href="features.html#goal-setting">← Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="decorations">
+          <div class="decoration star" style="top: 15%; left: 15%;"></div>
+          <div class="decoration circle" style="top: 20%; right: 25%;"></div>
+        </div>
+        <div class="feature-icon yellow">🎯</div>
+        <h1>Goal Setting</h1>
+        <p class="feature-description">Set and track personal growth goals with our structured approach.</p>
+      </section>
+
+      <section class="goals-container">
+        <div class="new-goal-form card">
+          <h2>New Goal</h2>
+          <form id="goalForm">
+            <div class="form-group">
+              <label for="goalTitle">Goal Title</label>
+              <input type="text" id="goalTitle" placeholder="What do you want to achieve?">
+            </div>
+            <div class="form-group">
+              <label for="goalDescription">Description</label>
+              <textarea id="goalDescription" placeholder="Describe your goal and why it matters to you"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="goalDeadline">Target Date (Optional)</label>
+              <input type="date" id="goalDeadline">
+            </div>
+            <button type="submit" class="btn-primary">Add Goal</button>
+          </form>
+        </div>
+
+        <h2>Your Goals</h2>
+        <div id="goalsContainer" class="goals-list">
+          <p class="empty-state">Your goals will appear here. Start by adding a goal above!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 MellowMind. Your data never leaves your device.</p>
+    </footer>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/goals.js"></script>
+</body>
+</html>

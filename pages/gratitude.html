@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Gratitude Journal | MellowMind</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo" onclick="location.href='../index.html'">MellowMind</div>
+      <nav>
+        <a href="features.html">← Back</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="decorations">
+          <div class="decoration star" style="top: 15%; left: 15%;"></div>
+          <div class="decoration circle" style="top: 20%; right: 25%;"></div>
+        </div>
+        <div class="feature-icon purple">🏆</div>
+        <h1>Gratitude Journal</h1>
+        <p class="feature-description">Cultivate positivity by recording daily moments of gratitude.</p>
+      </section>
+
+      <section class="gratitude-container">
+        <div class="gratitude-form card">
+          <h2>Today's Gratitude</h2>
+          <form id="gratitudeForm">
+            <div class="form-group">
+              <label for="gratitudePrompt">What are you grateful for today?</label>
+              <textarea 
+                id="gratitudeEntry" 
+                placeholder="List 3 things you're grateful for today..."
+                rows="6"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Save Entry</button>
+          </form>
+        </div>
+
+        <h2>Gratitude History</h2>
+        <div id="gratitudeContainer" class="gratitude-entries">
+          <!-- Gratitude entries will be displayed here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/gratitude.js"></script>
+</body>
+</html>
